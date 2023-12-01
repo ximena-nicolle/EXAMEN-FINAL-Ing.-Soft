@@ -1,0 +1,15 @@
+Pregunta 3:
+Se requiere realizar un cambio en el software para que soporte un valor máximo de 200 soles a transferir por día.
+Qué cambiaría en el código (Clases / Métodos) - No implementación.
+Nuevos casos de prueba a adicionar.
+Cuánto riesgo hay de “romper” lo que ya funciona?
+
+Respuesta: 
+
+Para adaptar mi aplicación a la nueva restricción de un máximo de 200 soles por día en transferencias, modificaría la clase "Cuenta" 
+añadiendo un atributo para registrar el monto transferido diariamente. Este sería un diccionario que vincula fechas con montos transferidos.
+Además, ajustaría el método "realizar_pago" para que verifique si el pago excede el límite diario, sumando el monto actual al ya acumulado 
+del día. En cuanto a los casos de prueba, añadiría situaciones donde se realizan pagos por debajo y por encima del límite, y también probaría
+la correcta reinicialización del límite al cambiar de día. El riesgo de introducir estos cambios es moderado, ya que, aunque las modificaciones
+son relativamente directas, podrían afectar la funcionalidad principal de realizar pagos. Por ello, es necesario realizar pruebas exhaustivas para
+evitar errores y garantizar que las funciones existentes continúen funcionando correctamente.
